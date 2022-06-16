@@ -1,4 +1,4 @@
-
+import string
 #     print('x' , end="")
 
 
@@ -14,6 +14,10 @@
 
 # lst = [2, 5, 7, 8, 9]
 # sum(lst)
+import abc
+from idlelib.pyparse import trans
+
+import cipher as cipher
 
 S = 'hello to the fucking world'
 print(S.upper())
@@ -24,6 +28,16 @@ dir(S)
 print(S.strip())
 print(S.rstrip())
 print(S.lstrip())
-print(S.rfind("l" , 3))
-print(S.rfind("o" , 1 , 3))
+print(S.rfind("l", 3))
+print(S.rfind("o", 1, 3))
 print(S.index("w"))
+print(S.strip())
+print(S.swapcase())
+print(S.count("l"))
+print(S.zfill(10))
+print(S.replace("l", "f"))
+s = "hello"
+abc = string.ascii_lowercase
+s = "hello"
+s.translate(str.maketrans(abc, trans))
+cipher = user.translate()
