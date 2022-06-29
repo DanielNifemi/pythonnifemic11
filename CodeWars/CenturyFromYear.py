@@ -3,4 +3,4 @@ def century(year):
     return (year + 99) // 100
 
 
-print(century(2006))
+print(century(1890))
