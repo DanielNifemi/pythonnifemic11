@@ -1,0 +1,51 @@
+# create an app that allowes two users to message each other
+# the app should have a list of users
+# the app should have a list of messages
+# the app should have a list of users who have sent messages
+# the app should have a list of users who have received messages
+# the app should have a list of users who have sent messages but not received messages
+# the app should have a list of users who have received messages but not sent messages
+# the app should have a list of users who have not received messages nor sent messages
+# the app should have a list of users who have received messages and sent messages
+# the app should have a list of users who have not received messages but have sent messages
+# the app should have a list of users who have not sent messages but have received messages
+# the app should have a list of users who have not sent messages nor received messages
+# the app should have a list of users who have received messages and not sent messages
+# the app should have a list of users who have not received messages but have sent messages
+# the app should have a list of users who have not received messages nor sent messages
+
+
+from bandwidth.messaging.models.message_request import MessageRequest
+from bandwidth.messaging.models.message_response import MessageResponse
+from bandwidth.messaging.models.message_response_list import MessageResponseList
+from bandwidth.messaging.models.message_response_list_item import MessageResponseListItem
+from bandwidth.messaging.models.message_response_list_item_list import MessageResponseListItemList
+from bandwidth.messaging.models.message_response_list_item_list_item import MessageResponseListItemListItem
+from bandwidth.messaging.models.message_response_list_item_list_item_list import MessageResponseListItemListItemList
+from bandwidth.messaging.models.message_response_list_item_list_item_list_item import MessageResponseListItemListItemListItem
+
+messagingBody = MessageRequest()
+messagingBody.to = ["{to}"]
+messagingBody.mfrom = "{from}"
+messagingBody.text = "Hello, I am sending a message! How fun!"
+messagingBody.application_id = "{app_id}"
+
+messaging_client.create_message("{account_id}", body=messagingBody)
+
+messaging_response = messaging_client.create_message("{account_id}", body=messagingBody)
+messaging_response_list = messaging_response.body.messaging_response_list
+messaging_response_list_item = messaging_response_list.messaging_response_list_item[0]
+messaging_response_list_item_list = messaging_response_list_item.message_response_list_item_list
+messaging_response_list_item_list_item = messaging_response_list_item_list.message_response_list_item_list_item[0]
+messaging_response_list_item_list_item_list = messaging_response_list_item_list_item.message_response_list_item_list_item_list
+messaging_response_list_item_list_item_list_item = messaging_response_list_item_list_item_list.message_response_list_item_list_item_list_item[0]
+messaging_response_list_item_list_item_list_item_list = messaging_response_list_item_list_item_list_item.message_response_list_item_list_item_list_item_list
+messaging_response_list_item_list_item_list_item_list_item = messaging_response_list_item_list_item_list_item_list.message_response_list_item_list_item_list_item_list_item[0]
+messaging_response_list_item_list_item_list_item_list_item_list = messaging_response_list_item_list_item_list_item_list_item.message_response_list_item_list_item_list_item_list_item_list
+messaging_response_list_item_list_item_list_item_list_item_list_item = messaging_response_list_item_list_item_list_item_list_item_list.message_response_list_item_list_item_list_item_list_item_list_item[0]
+messaging_response_list_item_list_item_list_item_list_item_list_item_list = messaging_response_list_item_list_item_list_item_list_item_list_item.message_response_list_item_list_item_list_item_list_item_list_item_list
+messaging_response_list_item_list_item_list_item_list_item_list_item_list_item = messaging_response_list_item_list_item_list_item_list_item_list_item_list.message_response_list_item_list_item_list_item_list_item_list_item_list_item[0]
+messaging_response_list_item_list_item_list_item_list_item_list_item_list_item_list = messaging_response_list_item_list_item_list_item_list_item_list_item_list_item.message_response_list_item_list_item_list_item_list_item_list_item_list_item_list
+messaging_response_list_item_list_item_list_item_list_item_list_item_list_item_list_item = messaging_response_list_item_list_item_list_item_list_item_list_item_list_item_list.message_response_list_item_list_item_list_item_list_item_list_item_list_item_list_item[0]
+messaging_response_list_item_list_item_list_item_list_item_list_item_list_item_list_item = messaging_response_list_item_list_item_list_item_list_item_list_item_list_item_list_item.message_response_list_item_list_item_list_item_list_item_list_item_list_item_list_item[0]
+messaging_response_list_item_list_item_list_item_list_item_list_item_list_item_list_item_list = messaging_response_list_item_list_item_list_item_list_item_list_item_list_item_list_item.message_response_list_item_list_item_list_item_list_item_list_item_list_item_list_item[0]

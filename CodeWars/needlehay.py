@@ -13,3 +13,5 @@ def find_needle(haystack):
             return 'found the needle at position %s' % position
         else:
             position += 1
+            print(find_needle(haystack[1:]))
+            return 'found the needle at position %s' % position
