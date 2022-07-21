@@ -1,5 +1,6 @@
 
 # write a program that outputs the report card of a student.
+import sys
 
 print("================================================================")
 print()
@@ -23,6 +24,7 @@ if choice == 1:
         print("Welcome to the system")
     else:
         print("Invalid username or password")
+        sys.exit()
 elif choice == 2:
     print("Enter your username : ", end="")
     username = input()
