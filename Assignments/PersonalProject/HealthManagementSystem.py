@@ -1,5 +1,5 @@
 # create an application that allows the user to in put his/her health information
-
+import json
 
 # create a dictionary to store the health information
 import sys
@@ -25,7 +25,12 @@ if choice == 1:
     username = input()
     print("Enter your password : ", end="")
     password = input()
+    # login the user
     if username == "admin" and password == "admin":
+        print("Welcome to the admin page")
+        print()
+        print("1. Add a new user")
+        print("2. Add a new patient")
         print("Welcome to the system")
         print(health_info)
     else:
@@ -111,4 +116,13 @@ elif choice == 2:
     health_info[name] = [name, age, height, weight, blood_type, allergies, medical_conditions, medications,
                          medical_history, physical_activity, diet, sleep, exercise, stress, weight_loss, weight_gain,
                          weight_maintenance]
-
+    user_info = [username, password]
+    # save the patient's health information to a json file
+    with open('health_info.json', 'w') as f:
+        json.dump(health_info, f)
+    print("Your health information has been saved successfully")
+    print("\n")
+    # save username and password to a json file
+    with open('user_info.json', 'w') as f:
+        json.dump(user_info, f)
+    print("Your username and password has been saved successfully")
