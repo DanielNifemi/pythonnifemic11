@@ -23,7 +23,9 @@ def time():
 # will look more attractive
 lbl = Label(root, font=('Segoe Script', 0, 'bold'),
             background='black',
-            foreground='yellow')
+            foreground='yellow',
+            width=10,
+            justify=CENTER)
 
 # Placing clock at the centre
 # of the tkinter window
