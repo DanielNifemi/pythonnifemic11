@@ -8,7 +8,7 @@ import calendar
 
 def print_calendar(year=None, month=None):
     if year is None:
-        year = calendar.now().year
+        year = calendar.get_now().year
     if month is None:
         month = datetime.now().month
     print(calendar.month(year, month))
